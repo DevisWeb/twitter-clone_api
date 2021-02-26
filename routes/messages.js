@@ -9,6 +9,8 @@ router.get("/", (_, res) => {
   res.redirect("/messages");
 });
 
+
+router.get("/messages/user/:user_id", messagesControllers.getByUserId);
 router.get("/messages/:id", messagesControllers.getById);
 router.get("/messages/", messagesControllers.getAll);
 
