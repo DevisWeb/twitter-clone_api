@@ -1,12 +1,14 @@
 / --> /messages   (list of all messages)
-/messsages/:id    (get message by id)
+/messages/:id    (get message by id)
 
-/users   (list o)
-/users
+/users            (list of all users)
+/users/:id
+/users/:id/messages 
+
 
 ___
 
 randomize users will be done by FE
 
-MongoDB
+BE will use MongoDB
 
