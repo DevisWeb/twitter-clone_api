@@ -1,0 +1,12 @@
+/ --> /messages   (list of all messages)
+/messsages/:id    (get message by id)
+
+/users   (list o)
+/users
+
+___
+
+randomize users will be done by FE
+
+MongoDB
+
