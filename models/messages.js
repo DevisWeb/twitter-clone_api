@@ -9,8 +9,8 @@ const messagesSchema = new Schema({
   id: {type: Number, required: true},
   text: {type: String, required: true},
   date: {type: Date, default: Date.now},
-  id_user: {type : Number, required: true}
+  user_id: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
 //Export module
-module.exports = mongoose.model("message", messagesSchema);
+module.exports = mongoose.model("Message", messagesSchema);

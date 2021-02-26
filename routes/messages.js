@@ -9,7 +9,8 @@ router.get("/", (_, res) => {
   res.redirect("/messages");
 });
 
-router.get("/messages/", messagesControllers.getAll);
 router.get("/messages/:id", messagesControllers.getById);
+router.get("/messages/", messagesControllers.getAll);
+
 
 module.exports = router;
