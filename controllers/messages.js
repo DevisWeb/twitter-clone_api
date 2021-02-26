@@ -16,7 +16,7 @@ const messagesController = {
     }
   },
   getById: async (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = req.params.id;
 
     try {
       const dbResult = await messages.find({ id });
