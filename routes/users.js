@@ -3,8 +3,7 @@ const router = express.Router();
 
 const usersControllers = require("../controllers/users");
 
-router.get("/", usersControllers.getAll);
 router.get("/:id", usersControllers.getById);
-router.get("/:id/messages", usersControllers.getUserMessages);
+router.get("/", usersControllers.getAll);
 
 module.exports = router;

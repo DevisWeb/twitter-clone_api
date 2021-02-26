@@ -17,9 +17,9 @@ const messagesController = {
   },
   getById: async (req, res) => {
     const id = req.params.id;
-
+    console.log(id);
     try {
-      const dbResult = await messages.find({ id });
+      const dbResult = await messages.find({ _id: id });
       res.json({
         code: 200,
         operation: "success",

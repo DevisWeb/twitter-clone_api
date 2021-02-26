@@ -16,26 +16,10 @@ const usersController = {
     }
   },
   getById: async (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = req.params.id;
 
     try {
-      const dbResult = await users.find({ id });
-      res.json({
-        code: 200,
-        operation: "success",
-        description: "User data",
-        data: dbResult,
-      });
-    } catch (e) {
-      console.log(e);
-      res.sendStatus(404);
-    }
-  },
-
-  getUserMessages: async (req, res) => {
-    const id = parseInt(req.params.id);
-    try {
-      const dbResult = await users.find({ id });
+      const dbResult = await users.find({ _id: id });
       res.json({
         code: 200,
         operation: "success",
